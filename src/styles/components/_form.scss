@@ -1,0 +1,47 @@
+@import '../abstract/media-queries';
+.form {
+    width: calc(100% - 4rem);
+    margin: 0 auto;
+    padding-top: 3rem;
+    max-width: 335px;
+    
+    &__input {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        padding: .5rem .75rem;
+        border-radius: .25rem;
+        border: .125rem solid rgba(black,.2);
+    }
+    
+    &__button {
+        background: linear-gradient(to right, var(--header-bg-from), var(--header-bg-to));
+        border: none;
+        border-radius: .25rem;
+        color: #FFFFFF;
+        font-family: 'Karla', sans-serif;
+        font-weight: 500;
+        letter-spacing: -.1rem;
+        display: block;
+        width: 100%;
+        padding: .75rem 0;
+        height: fit-content;
+    }
+
+    &__img {
+        object-fit: contain;
+        margin: 2rem auto;
+        border-radius: .25rem;
+    }
+    
+    @include media-query($sm-screen){
+        max-width: 40rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: calc(100% - 6rem);
+        
+        &__input {
+            width: 45%;
+        }
+    }
+}

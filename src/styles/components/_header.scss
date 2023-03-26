@@ -1,0 +1,26 @@
+@import '../abstract/media-queries';
+
+.header {
+    color: #FFFFFF;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(to right, var(--header-bg-from), var(--header-bg-to));
+    &__logo {
+        font-family: 'Karla', sans-serif;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        letter-spacing: -.1rem;
+    }
+    h3 {
+        font-weight: 400;
+        font-size: .75rem;
+    }
+
+    @include media-query($sm-screen){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
